@@ -1,0 +1,32 @@
+@keyframes bottomPanelRightExpand {
+  from {
+    transform: translateX(-9rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+.expanding-bottom-panel {
+    transform: translateX(-9rem);
+    animation: bottomPanelRightExpand 1s 1s ease-out forwards;
+}
+
+.bottom-panel-phase-one {
+    animation: startUpLtoR 1s ease-out forwards;
+}
+
+.bottom-panel-phase-two path {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUpLtoR 1s 1s ease-out forwards;
+}
+
+.bottom-panel-phase-three path {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUpRtoL 1s 2s ease-out forwards;
+}
+
+.bottom-panel-phase-four path {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: blinkerBits 1s 2s ease-out forwards;
+}

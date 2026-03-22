@@ -1,0 +1,95 @@
+@keyframes alisterSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes alisterSpinOpposite {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes centerOutScale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.phase-one-startup {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    
+    animation: leftPanelStartBlink 1s ease-in-out forwards, alisterSpin 4s 1s ease-in-out infinite alternate;
+}
+
+.phase-two-startup {
+    clip-path: rect(0% 0% 0% 0%);
+    transform-origin: center !important;
+    transform-box: fill-box;
+    animation: startUpPanels  1s 0.5s ease-in-out forwards, alisterSpinOpposite 4s 1.2s ease-in-out infinite alternate;
+}
+
+.phase-zero-startup-circle-scale-out { 
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transform: scale(0);
+    animation: centerOutScale 1s ease-out forwards;
+}
+
+.phase-zero-startup-circle-scale-out-outer { 
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transform: scale(0);
+    animation: centerOutScale 1s ease-out forwards, alisterSpinOpposite 4s 1.2s ease-in-out infinite alternate;;
+}
+
+.phase-zero-startup-circle {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    clip-path: circle(0%);
+    animation: startUp 1s 1s ease-out forwards;
+}
+
+.outer-ring-phase-one-startup {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    animation: startUpPanels 1s linear forwards;
+}
+
+/* text box area */
+
+
+
+.phase-one-startup-textbox {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUpLtoR  1s 1.1s ease-in forwards;
+}
+
+.phase-two-startup-textbox {
+    animation: blinkerBits 0.4s 2.4s ease-in-out forwards;
+     clip-path: rect(0% 0% 0% 0%);
+}
+
+.phase-three-startup-textbox {
+    animation: startUpLtoR .2s 2.4s ease-in-out forwards;
+     clip-path: rect(0% 0% 0% 0%);
+}
+
+.phase-three-startup-textbox-bar{
+    animation: startUpRtoL .8s 2.4s ease-in-out forwards;
+     clip-path: rect(0% 0% 0% 0%);
+}
+
+
+
+

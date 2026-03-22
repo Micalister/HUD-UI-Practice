@@ -1,0 +1,17 @@
+/* 
+colors!
+#2B47BE main blue
+#E55213 highlight orange
+#02040A dark blue-black
+#D9DDEF blue white
+*/
+
+p {
+  color: #D9DDEF;
+  font-family: "hansson-stencil-mn";
+}
+
+body {
+  background-color: #02040A !important;
+  margin: 2rem;
+}

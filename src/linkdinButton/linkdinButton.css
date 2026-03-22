@@ -1,0 +1,39 @@
+@keyframes startUpSmall {
+    100% {
+        transform: translateX(0rem);
+    }
+
+}
+
+@keyframes icon {
+    0% {
+        clip-path: rect(100% 100% 100% 0%);
+    }
+    100% {
+        clip-path: rect(0% 100% 100% 0%);
+    }
+}
+
+.button-phase-left-small {
+    animation: startUpSmall 1s 1s ease-in-out forwards;
+    transform: translateX(1.5rem);
+}
+
+.button-phase-right-small {
+    animation: startUpSmall 1s 1s ease-in-out forwards;
+    transform: translateX(-1.5rem);
+}
+
+.icon-phase-four {
+    animation: icon 0.5s 2s ease-in-out forwards;
+    clip-path: rect(100% 100% 100% 0%);
+}
+
+.button-hover-small .button-hover-small-selector{
+    transition: fill 0.3s linear; 
+}
+
+.button-hover-small:hover .button-hover-small-selector{
+    transition: fill 0.3s linear; 
+    fill: #e55213 !important;
+}

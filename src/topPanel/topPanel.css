@@ -1,0 +1,51 @@
+.top-panel svg {
+    width: 80rem
+}
+
+@keyframes startUpRtoL {
+    0% {
+        clip-path: rect(0 100% 100% 100%);
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0%);
+    }
+}
+
+.top-panel-phase-one-hex {
+    animation: leftPanelStartBlink 0.5s ease-out forwards;
+}
+
+.top-panel-phase-one-left {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpLtoR 0.5s 0.5s ease-out forwards;
+}
+
+.top-panel-phase-one-right {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpRtoL 0.5s 0.5s ease-out forwards;
+}
+
+.top-panel-phase-two-left {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpLtoR 0.5s 1s ease-out forwards;
+}
+
+.top-panel-phase-two-right {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpRtoL 0.5s 1s ease-out forwards;
+}
+
+.top-panel-phase-two-hex {
+    clip-path: rect(0 0% 0% 0%);
+    animation: leftPanelStartBlink 0.5s 1s ease-out forwards;
+}
+
+.top-panel-phase-three-left {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpLtoR 0.5s 1.5s ease-out forwards;
+}
+
+.top-panel-phase-three-right {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpRtoL 0.5s 1.5s ease-out forwards;
+}

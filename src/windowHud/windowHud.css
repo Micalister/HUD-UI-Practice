@@ -1,0 +1,116 @@
+@keyframes startUp {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(100%);
+  }
+}
+
+@keyframes startUpTraces {
+  from {
+    clip-path: rect(0% 0% 0% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes startUpBorder {
+  from {
+    clip-path: rect(0% 100% 100% 100%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes startUpPanels {
+  0% {
+    opacity: 0;
+    clip-path: rect(0% 0% 0% 0%);
+  }
+  20% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 80%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 0%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes blinkerBits {
+  0% {
+    opacity: 0;
+    clip-path: rect(0% 0% 0% 0%);
+  }
+  20% {
+    opacity: 1;
+    clip-path: rect(0% 80% 100% 0%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    clip-path: rect(0% 30% 100% 0%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+.phase-one {
+  animation: startUp 0.5s linear forwards;
+}
+
+.phase-two {
+  clip-path: rect(0% 0% 0% 0%);
+  animation: 
+    startUpTraces 0.5s .4s linear forwards, 
+    blinkerBits 0.5s 3s linear forwards;
+  
+}
+
+.phase-three {
+  clip-path: rect(0% 0% 0% 0%);
+  animation: startUpTraces 0.5s linear forwards;
+  animation-delay: .8s;
+}
+
+.phase-four {
+  clip-path: rect(0% 0% 0% 0%);
+  animation: startUpBorder 0.5s linear forwards;
+  animation-delay: 1.2s;
+}
+
+.phase-five {
+  opacity: 0;
+  animation: startUpPanels 0.5s linear forwards;
+  animation-delay: 1.6s;
+}
+
+.phase-six {
+  clip-path: rect(0% 0% 0% 0%);
+  animation: startUpTraces 0.5s linear forwards;
+  animation-delay: 2s;
+}
+
+
+
+

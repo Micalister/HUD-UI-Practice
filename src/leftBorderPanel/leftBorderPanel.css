@@ -1,0 +1,122 @@
+.left-border-panel svg {
+  height: 30rem;
+}
+
+@keyframes leftPanelStartBlink {
+    0% {
+    opacity: 0;
+    clip-path: circle(0%);
+  }
+  20% {
+    opacity: 1;
+    clip-path: circle(80%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    clip-path: circle(40%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    clip-path: circle(100%);
+  }
+}
+
+@keyframes leftPanelBtoT {
+  from {
+    clip-path: rect(100% 100% 100% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes leftPanelTtoB {
+  from {
+    clip-path: rect(0% 100% 0% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes topPanelOpen {
+  from {
+    transform: translateY(22rem);
+  }
+  to {            
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomPanelOpen {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {            
+    transform: translateY(0);
+  }
+}
+
+/* could be global* 
+
+.left-panel-BtoT{
+    animation: leftPanelBtoT 0.5s linear forwards;
+}
+
+.left-panel-RtoL{
+    animation: leftPanelRtoL 0.5s linear forwards;
+}
+
+
+*/
+
+/* phase one */
+
+.left-panel-phase-one {
+    
+}
+
+.left-panel-phase-one-top {
+    transform: translateY(22rem);
+    animation: leftPanelBtoT 0.5s linear forwards, topPanelOpen 0.5s 0.6s linear forwards;
+    
+}
+
+.left-panel-phase-one-bottom {
+    transform: translateY(-10rem);
+    animation: leftPanelTtoB 0.5s linear forwards, bottomPanelOpen 0.5s 0.6s linear forwards;
+}
+
+.left-panel-phase-one-circle {
+    animation: leftPanelStartBlink 0.5s linear forwards;
+}
+
+/* phase 2 */
+
+.left-middle-panel-phase-two {
+    clip-path: rect(0% 100% 0% 0%);
+    animation: leftPanelBtoT 0.5s 0.7s linear forwards;
+}
+
+.left-top-panel-phase-two {
+    clip-path: rect(0% 100% 0% 0%);
+    animation: leftPanelTtoB 0.5s 1s linear forwards;
+}
+
+.left-bottom-panel-phase-two {
+    clip-path: rect(0% 100% 0% 0%);
+    animation: leftPanelBtoT 0.5s 1s linear forwards;
+}
+
+/* Phase three */
+
+.left-panel-phase-three {
+  clip-path: circle(0%);
+  animation: startUp 0.5s 1.6s linear forwards;
+}

@@ -1,0 +1,48 @@
+@keyframes right-border-panel-phase-one-right {
+    0% {
+        fill: red;
+    }
+    100% {
+        fill: green;
+    }
+}
+
+@keyframes right-border-panel-phase-one-left {
+    0% {
+        transform: translateX(2rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+.right-border-panel-phase-one {
+    animation: leftPanelStartBlink 0.5s linear forwards;
+}
+
+.right-border-panel-phase-one-left {
+    clip-path: rect(0% 0% 0% 0%);
+    transform: translateX(2rem);
+    animation: startUpRtoL 1s ease-out forwards, right-border-panel-phase-one-left 0.5s 1s linear forwards;
+}
+
+.right-border-panel-phase-one-right {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUpLtoR 1s ease-out forwards;
+}
+
+.right-border-panel-phase-two path {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUpRtoL 1s 0.5s ease-out forwards;
+}
+
+.right-border-panel-phase-three path {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUp 1s 1s ease-out forwards;
+}
+
+.right-border-panel-phase-four path, .right-border-panel-phase-four rect {
+    clip-path: rect(0% 0% 0% 0%);
+    animation: startUpLtoR 1s 1.5s ease-out forwards, blinkerBits 0.5s 2.5s linear forwards;
+}
+

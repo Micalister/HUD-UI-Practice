@@ -1,0 +1,303 @@
+/* Centralizing the animation keyframes */
+
+/* 
+Personal custom animations that are used on specific components:
+    • alister.css {
+        alisterSpin
+        alisterSpinOpposite
+        centerOutScale
+    }
+    • bottomPanel {
+        bottomPanelRightExpand
+    }
+*/
+
+/* Global Animations */
+
+/* List to go through */
+@keyframes startUp {
+    0% {
+        clip-path: circle(0%);
+    }
+    100% {
+        clip-path: circle(100%);
+    }
+
+}
+
+@keyframes startUpLeft {
+    from {
+        transform: translateX(5rem);
+    }
+    to {
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes startUpRight {
+    100% {
+        transform: translateX(0rem);
+    }
+
+}
+
+@keyframes buttonExpandLeft {
+    0% {
+        clip-path: rect(0% 0% 100% 0%);
+    }
+    100% {
+        clip-path: rect(0% 100% 100% 0%);
+    }
+}
+
+@keyframes buttonExpandRight {
+    0% {
+        clip-path: rect(0% 100% 100% 100%);
+    }
+    100% {
+        clip-path: rect(0% 100% 100% 0%);
+    }
+}
+
+@keyframes buttonHover {
+    0% {
+        fill: #2b47be;
+        clip-path: circle(0%)
+    }
+    100% {
+        fill: #e55213;
+        clip-path: circle(100%)
+    }
+}
+
+@keyframes startUpLtoR {
+    0% {
+        clip-path: rect(0 0 100% 0);
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0);
+    }
+}
+
+@keyframes startUpRtoL {
+    0% {
+        clip-path: rect(0 100% 100% 100%);
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0%);
+    }
+}
+
+@keyframes startUpBtoT {
+    from {
+    clip-path: rect(100% 100% 100% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes startUpTtoB {
+    from {
+    clip-path: rect(0% 100% 0% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes leftPanelStartBlink {
+    0% {
+    opacity: 0;
+    clip-path: circle(0%);
+  }
+  20% {
+    opacity: 1;
+    clip-path: circle(80%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    clip-path: circle(40%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    clip-path: circle(100%);
+  }
+}
+
+@keyframes leftPanelBtoT {
+  from {
+    clip-path: rect(100% 100% 100% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes leftPanelTtoB {
+  from {
+    clip-path: rect(0% 100% 0% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes topPanelOpen {
+  from {
+    transform: translateY(22rem);
+  }
+  to {            
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomPanelOpen {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {            
+    transform: translateY(0);
+  }
+}
+
+@keyframes startUpSmall {
+    100% {
+        transform: translateX(0rem);
+    }
+
+}
+
+@keyframes icon {
+    0% {
+        clip-path: rect(100% 100% 100% 0%);
+    }
+    100% {
+        clip-path: rect(0% 100% 100% 0%);
+    }
+}
+
+@keyframes startUpLtoRBlinker {
+    0% {
+        clip-path: rect(0 0% 0% 0);
+        opacity: 0;
+    }
+    25% {
+        clip-path: rect(0 100% 100% 0);
+        opacity: 1;
+    }
+    50% {
+        clip-path: rect(0 0% 0% 0);
+        opacity: 0;
+    }
+    75% {
+        clip-path: rect(0 100% 40% 0);
+        opacity: 1;
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0);
+        opacity: 1;
+    }
+}
+
+@keyframes startUpRtoL {
+    0% {
+        clip-path: rect(0 100% 100% 100%);
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0%);
+    }
+}
+
+@keyframes startUp {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(100%);
+  }
+}
+
+@keyframes startUpTraces {
+  from {
+    clip-path: rect(0% 0% 0% 0%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes startUpBorder {
+  from {
+    clip-path: rect(0% 100% 100% 100%);
+  }
+  to {
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes startUpPanels {
+  0% {
+    opacity: 0;
+    clip-path: rect(0% 0% 0% 0%);
+  }
+  20% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 80%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 0%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes blinkerBits {
+  0% {
+    opacity: 0;
+    clip-path: rect(0% 0% 0% 0%);
+  }
+  20% {
+    opacity: 1;
+    clip-path: rect(0% 80% 100% 0%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    clip-path: rect(0% 30% 100% 0%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    clip-path: rect(0% 100% 100% 0%);
+  }
+}
+
+@keyframes bottomPanelRightExpand {
+  from {
+    transform: translateX(-9rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}

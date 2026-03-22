@@ -1,0 +1,40 @@
+
+
+.test {
+    fill: white;
+}
+
+.test-group path{
+    fill: red;
+}
+
+.mobile-right-panel-phase-two-a {
+    clip-path: rect(0 0 100% 0);
+    animation: leftPanelTtoB 1s 1s linear forwards;
+}
+
+.mobile-right-panel-phase-two-b {
+    clip-path: rect(0 0 0% 0);
+    animation: startUpRtoL 1s 1s linear forwards;
+}
+
+.mobile-right-panel-phase-two-c {
+clip-path: rect(0 0 0% 0);
+    animation: startUpLtoR 1s 1s linear forwards;
+}
+
+.mobile-right-panel-phase-three-a {
+    clip-path: rect(0 0 100% 0);
+    animation: leftPanelBtoT 1s 1.5s linear forwards;
+}
+
+.mobile-right-panel-phase-three-b {
+    clip-path: rect(0 0 100% 0);
+    animation: leftPanelTtoB 1s 1.5s linear forwards;
+}
+
+.mobile-right-panel-phase-four {
+    clip-path: rect(0 0% 0% 0);
+    opacity: 0;
+    animation: startUpLtoRBlinker 0.5s 2.5s linear forwards;
+}

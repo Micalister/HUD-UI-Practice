@@ -1,0 +1,38 @@
+@keyframes startUpLtoRBlinker {
+    0% {
+        clip-path: rect(0 0% 0% 0);
+        opacity: 0;
+    }
+    25% {
+        clip-path: rect(0 100% 100% 0);
+        opacity: 1;
+    }
+    50% {
+        clip-path: rect(0 0% 0% 0);
+        opacity: 0;
+    }
+    75% {
+        clip-path: rect(0 100% 40% 0);
+        opacity: 1;
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0);
+        opacity: 1;
+    }
+}
+
+.mouse-panel-phase-one-right {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpRtoL 1s ease-out forwards;
+}
+
+.mouse-panel-phase-one-left {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpLtoR 1s ease-out forwards;
+}
+
+.mouse-panel-phase-two {
+    clip-path: rect(0 0% 0% 0%);
+    animation: startUpLtoRBlinker 0.5s 1s ease-out forwards;
+}
+

@@ -1,0 +1,47 @@
+.mobile-alister {
+    transform: translateX(18rem) translateY(6rem);
+}
+
+@keyframes hamburger-menu-phase-one-startup {
+    0% {
+        clip-path: circle(0%);
+    }
+    100% {
+        clip-path: circle(100%);
+    }
+}
+
+@keyframes hamburger-menu-phase-two-top {
+    0% {
+        transform: translateY(0.25rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes hamburger-menu-phase-two-bottom {
+    0% {
+        transform: translateY(-0.25rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+
+
+.hamburger-menu-phase-one-startup {
+    clip-path: circle(0%);
+    animation: hamburger-menu-phase-one-startup 1s 1s forwards;
+}
+
+.hamburger-menu-phase-two-startup-top {
+    transform: translateY(0.25rem);
+    animation: hamburger-menu-phase-two-top 1s 1.5s forwards;
+}
+
+.hamburger-menu-phase-two-startup-bottom {
+    transform: translateY(-0.25rem);
+    animation: hamburger-menu-phase-two-bottom 1s 1.5s forwards;
+}

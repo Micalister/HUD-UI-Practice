@@ -1,0 +1,33 @@
+input {
+    background: none;
+    border: none;
+    color: #D9DDEF;
+    font-family: "hansson-stencil-mn";
+    font-size: 18px;
+    transform: translateX(.5rem) translateY(.5rem);
+    outline: none;
+    width: 90%;
+}
+
+@keyframes startUpLtoR {
+    0% {
+        clip-path: rect(0 0 100% 0);
+    }
+    100% {
+        clip-path: rect(0 100% 100% 0);
+    }
+}
+
+.input-field-phase-one {
+    animation: leftPanelBtoT  0.5s ease-out;
+}
+
+.input-field-phase-two {
+    clip-path: rect(0 0 100% 0);
+    animation: startUpLtoR  1s 0.6s ease-out forwards; 
+}
+
+.input-field-phase-three {
+    clip-path: rect(0 0 100% 0);
+    animation: startUpLtoR  1s 0.6s linear forwards;
+}
