@@ -90,6 +90,7 @@ function App() {
         {activePage[pageIndex] === 'Contact' && <PageContact />}
         {activePage[pageIndex] === 'About Me' && <PageAboutMe />}
         <TimeHud />
+        <RightBorderPanel />
 
 
         {/* testing all the svg elements and init set up 
@@ -104,7 +105,6 @@ function App() {
           <CarouselButton />
           <InputField placeholder="Placeholder Text" value={inputValue} onChange={inputHandleChange} />
           <InputMessageBox placeholder="Placeholder Text" value={messageValue} onChange={messageHandleChange} />
-          <RightBorderPanel />
           <MobilePanelContainer />*/}
           
       </header>
