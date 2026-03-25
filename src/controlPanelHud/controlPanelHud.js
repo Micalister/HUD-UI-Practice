@@ -1,5 +1,4 @@
 import './controlPanelHud.css'
-import { useState} from 'react';
 
 export default function ControlPanelHud({ activePage, pageIndex, setPageIndex }) {
 

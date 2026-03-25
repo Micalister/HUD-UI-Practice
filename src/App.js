@@ -1,6 +1,6 @@
 import './App.css';
 import './Keyframes.css';
-import { useState, useRef, forwardRef } from 'react';
+import { useState } from 'react';
 
 import WindowSizeHud from './windowHud/windowSizeHud.js';
 import Button from './button/button.js';  
@@ -19,7 +19,9 @@ import RightBorderPanel from './rightBorderPanel/rightBorderPanel.js';
 import TimeHud from './timeHud/timeHud.js';
 import MobilePanelContainer from './mobilePanelContainer/mobilePanelContainer.js';
 import ControlPanelHud from './controlPanelHud/controlPanelHud.js';
-
+import PagePortfolio from './pagePortfolio/pagePortfolio.js';
+import PageContact from './pageContact/pageContact.js';
+import PageAboutMe from './pageAboutMe/pageAboutMe.js';
 
 function App() {
 
@@ -56,11 +58,22 @@ function App() {
 
 
   /* ControlPanelHud logic to switch the content */
-    
+
   const activePage = ['Portfolio', 'Contact', 'About Me'];
 
   /* set the state of the active index */
   const [pageIndex, setPageIndex] = useState(0);
+
+  if (activePage[pageIndex] === 'Portfolio') {
+    // Logic for portfolio page
+    console.log('Portfolio page is active');
+  } else if (activePage[pageIndex] === 'Contact') {
+    // Logic for contact page
+    console.log('Contact page is active');
+  } else if (activePage[pageIndex] === 'About Me') {
+    // Logic for about me page
+    console.log('About Me page is active');
+  }
   
 
   return (
@@ -73,7 +86,10 @@ function App() {
         <BottomPanel />
         <Alister />
         <ControlPanelHud activePage={activePage} pageIndex={pageIndex} setPageIndex={setPageIndex} />
-
+        {activePage[pageIndex] === 'Portfolio' && <PagePortfolio />}
+        {activePage[pageIndex] === 'Contact' && <PageContact />}
+        {activePage[pageIndex] === 'About Me' && <PageAboutMe />}
+        <TimeHud />
 
 
         {/* testing all the svg elements and init set up 
@@ -89,7 +105,6 @@ function App() {
           <InputField placeholder="Placeholder Text" value={inputValue} onChange={inputHandleChange} />
           <InputMessageBox placeholder="Placeholder Text" value={messageValue} onChange={messageHandleChange} />
           <RightBorderPanel />
-          <TimeHud />
           <MobilePanelContainer />*/}
           
       </header>

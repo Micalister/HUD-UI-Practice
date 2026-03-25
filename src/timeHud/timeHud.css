@@ -1,0 +1,42 @@
+.time-hud {
+    position: relative;
+    top: -137.45rem;
+    left: 44.8rem;
+}
+
+.time-hud svg {
+    width: 8.5rem;
+}
+
+.time-hud-border {
+    clip-path: rect(0 0 0 0);
+    animation: startUpRtoL 1s 2s forwards;
+}
+
+.time-hud-background {
+    opacity: 0;
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoRBlinker 1s 3s forwards;
+}
+
+.time-hud-text {
+    clip-path: rect(0 0 0 0);
+    animation: icon 1s 3.5s forwards;
+}
+
+/* testing the svg */
+.in-the-way {
+    display: none;
+}
+
+.test {
+    fill: white !important;
+}
+
+.test-phase-one path {
+    fill: green
+}
+
+.test-phase-two path {
+    fill: red
+}

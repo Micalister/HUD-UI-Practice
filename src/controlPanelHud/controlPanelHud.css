@@ -208,20 +208,3 @@
     animation: icon 1s ease-out 2.5s forwards;
 }
 
-
-.in-the-way {
-    display: none;
-}
-
-.test {
-    fill: white !important;
-}
-
-.test-phase-one path {
-    fill: green
-}
-
-.test-phase-two path {
-    fill: red
-}
-
