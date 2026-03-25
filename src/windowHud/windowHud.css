@@ -1,3 +1,15 @@
+.WindowSizeHud {
+  position: relative;
+  float: right;
+  right: 0.2rem;
+  top: -15.2rem;
+  
+}
+
+.WindowSizeHud svg {
+  width: 13vw;
+}
+
 @keyframes startUp {
   from {
     clip-path: circle(0%);

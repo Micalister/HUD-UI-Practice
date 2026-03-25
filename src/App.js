@@ -18,6 +18,7 @@ import BottomPanel from './bottomPanel/bottomPanel.js';
 import RightBorderPanel from './rightBorderPanel/rightBorderPanel.js';
 import TimeHud from './timeHud/timeHud.js';
 import MobilePanelContainer from './mobilePanelContainer/mobilePanelContainer.js';
+import ControlPanelHud from './controlPanelHud/controlPanelHud.js';
 
 
 function App() {
@@ -53,12 +54,29 @@ function App() {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
+
+  /* ControlPanelHud logic to switch the content */
+    
+  const activePage = ['Portfolio', 'Contact', 'About Me'];
+
+  /* set the state of the active index */
+  const [pageIndex, setPageIndex] = useState(0);
+  
+
   return (
     <div className="App">
       <header className="App-header" onMouseMove={handleMouseMove}>
+        <TopPanel />
+        <MouseHud mousePosition={mousePosition} />
+        <LeftBorderPanel />
+        <WindowSizeHud />
+        <BottomPanel />
+        <Alister />
+        <ControlPanelHud activePage={activePage} pageIndex={pageIndex} setPageIndex={setPageIndex} />
 
-        {/* testing all the svg elements and init set up */}
-          <WindowSizeHud />
+
+
+        {/* testing all the svg elements and init set up 
           <Button label="Source Code" />
           <Button label="Design Process" />
           <Button label="Showcase" />
@@ -68,16 +86,11 @@ function App() {
           <LinkdinButton />
           <UpgradedButton text="Launch" />
           <CarouselButton />
-          <MouseHud mousePosition={mousePosition} />
-          <TopPanel />
-          <LeftBorderPanel />
           <InputField placeholder="Placeholder Text" value={inputValue} onChange={inputHandleChange} />
           <InputMessageBox placeholder="Placeholder Text" value={messageValue} onChange={messageHandleChange} />
-          <Alister />
-          <BottomPanel />
           <RightBorderPanel />
           <TimeHud />
-          <MobilePanelContainer />
+          <MobilePanelContainer />*/}
           
       </header>
     </div>

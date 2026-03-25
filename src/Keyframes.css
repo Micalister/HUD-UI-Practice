@@ -2,6 +2,11 @@
 
 /* 
 Personal custom animations that are used on specific components:
+
+    key: 
+      § = global animation made
+      ∂ = custom animation for a specific component
+
     • alister.css {
         alisterSpin
         alisterSpinOpposite
@@ -10,12 +15,59 @@ Personal custom animations that are used on specific components:
     • bottomPanel {
         bottomPanelRightExpand
     }
+    • button.css {
+        § startUp // startUpCircleIntoOut
+        ∂ buttonExpandLeft // startUpLtoR
+        ∂ buttonExpandRight // startUpRtoL
+        // startUpLeft and startUpRight are what the are lmao
+        buttonHover
+        buttonHoverInverted
+    }
+    • inputField.css {
+        § startUpLtoR 
+    }
+    • leftBorderPanel.css {
+        § leftPanelStartBlink // startUpCircleBlinker
+        leftPanelBtoT // startUpBtoT
+        leftPanelTtoB // startUpTtoB
+        ∂ topPanelOpen
+        ∂ bottomPanelOpen
+    }
+    • linkdinButton.css {
+        ∂ startUpSmall
+        § icon
+    }
+    • mobileAlister.css {
+        hamburger-menu-phase-one-startup
+        hamburger-menu-phase-two-top
+        hamburger-menu-phase-two-bottom
+    }
+    • mouseHud.css {
+        startUpLtoRBlinker
+    }
+    • rightBorderPanel.css {
+`       right-border-panel-phase-one-right
+        right-border-panel-phase-one-left
+    }
+    • topPanel.css {
+        § startUpRtoL
+    }
+    • windowHud.css {
+        startUp
+        startUpTraces
+        startUpBorder
+        startUpPanels
+        blinkerBits
+    }
 */
 
-/* Global Animations */
 
-/* List to go through */
-@keyframes startUp {
+
+
+/* -> Global Animations */
+
+/* replacing startUp from button.js */
+@keyframes startUpCircleIntoOut {
     0% {
         clip-path: circle(0%);
     }
@@ -23,52 +75,6 @@ Personal custom animations that are used on specific components:
         clip-path: circle(100%);
     }
 
-}
-
-@keyframes startUpLeft {
-    from {
-        transform: translateX(5rem);
-    }
-    to {
-        transform: translateX(0px);
-    }
-
-}
-
-@keyframes startUpRight {
-    100% {
-        transform: translateX(0rem);
-    }
-
-}
-
-@keyframes buttonExpandLeft {
-    0% {
-        clip-path: rect(0% 0% 100% 0%);
-    }
-    100% {
-        clip-path: rect(0% 100% 100% 0%);
-    }
-}
-
-@keyframes buttonExpandRight {
-    0% {
-        clip-path: rect(0% 100% 100% 100%);
-    }
-    100% {
-        clip-path: rect(0% 100% 100% 0%);
-    }
-}
-
-@keyframes buttonHover {
-    0% {
-        fill: #2b47be;
-        clip-path: circle(0%)
-    }
-    100% {
-        fill: #e55213;
-        clip-path: circle(100%)
-    }
 }
 
 @keyframes startUpLtoR {
@@ -107,7 +113,7 @@ Personal custom animations that are used on specific components:
   }
 }
 
-@keyframes leftPanelStartBlink {
+@keyframes startUpCircleBlinker {
     0% {
     opacity: 0;
     clip-path: circle(0%);
@@ -130,58 +136,6 @@ Personal custom animations that are used on specific components:
     opacity: 1;
     clip-path: circle(100%);
   }
-}
-
-@keyframes leftPanelBtoT {
-  from {
-    clip-path: rect(100% 100% 100% 0%);
-  }
-  to {
-    clip-path: rect(0% 100% 100% 0%);
-  }
-}
-
-@keyframes leftPanelTtoB {
-  from {
-    clip-path: rect(0% 100% 0% 0%);
-  }
-  to {
-    clip-path: rect(0% 100% 100% 0%);
-  }
-}
-
-@keyframes topPanelOpen {
-  from {
-    transform: translateY(22rem);
-  }
-  to {            
-    transform: translateY(0);
-  }
-}
-
-@keyframes bottomPanelOpen {
-  from {
-    transform: translateY(-10rem);
-  }
-  to {            
-    transform: translateY(0);
-  }
-}
-
-@keyframes startUpSmall {
-    100% {
-        transform: translateX(0rem);
-    }
-
-}
-
-@keyframes icon {
-    0% {
-        clip-path: rect(100% 100% 100% 0%);
-    }
-    100% {
-        clip-path: rect(0% 100% 100% 0%);
-    }
 }
 
 @keyframes startUpLtoRBlinker {
@@ -207,41 +161,7 @@ Personal custom animations that are used on specific components:
     }
 }
 
-@keyframes startUpRtoL {
-    0% {
-        clip-path: rect(0 100% 100% 100%);
-    }
-    100% {
-        clip-path: rect(0 100% 100% 0%);
-    }
-}
-
-@keyframes startUp {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(100%);
-  }
-}
-
-@keyframes startUpTraces {
-  from {
-    clip-path: rect(0% 0% 0% 0%);
-  }
-  to {
-    clip-path: rect(0% 100% 100% 0%);
-  }
-}
-
-@keyframes startUpBorder {
-  from {
-    clip-path: rect(0% 100% 100% 100%);
-  }
-  to {
-    clip-path: rect(0% 100% 100% 0%);
-  }
-}
+/* List to go through */
 
 @keyframes startUpPanels {
   0% {
@@ -290,14 +210,5 @@ Personal custom animations that are used on specific components:
   100% {
     opacity: 1;
     clip-path: rect(0% 100% 100% 0%);
-  }
-}
-
-@keyframes bottomPanelRightExpand {
-  from {
-    transform: translateX(-9rem);
-  }
-  to {
-    transform: translateX(0rem);
   }
 }

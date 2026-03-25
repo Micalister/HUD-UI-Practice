@@ -1,5 +1,12 @@
+.top-panel {
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+    
+}
+
 .top-panel svg {
-    width: 80rem
+    width: 92vw; 
 }
 
 @keyframes startUpRtoL {

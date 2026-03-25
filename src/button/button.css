@@ -4,6 +4,7 @@ button {
     font-family: "hansson-stencil-mn";
 }
 
+/* replaced with a global animation startUpCircleIntoOut*/
 @keyframes startUp {
     0% {
         clip-path: circle(0%);
@@ -14,6 +15,7 @@ button {
 
 }
 
+/* startUpLeft and startUpRight are used just for button so change name */
 @keyframes startUpLeft {
     from {
         transform: translateX(5rem);
@@ -49,8 +51,28 @@ button {
     }
 }
 
+/* covering the animation the hover effect */
+
+@keyframes buttonHover {
+    0% {
+        clip-path: rect(0% 100% 100% 100%);
+    }
+    100% {
+        clip-path: rect(0% 100% 100% 0%);
+    }
+}
+
+@keyframes buttonHoverInverted {
+    0% {
+        clip-path: rect(0% 100% 100% 0%);
+    }
+    100% {
+        clip-path: rect(0% 0% 100% 0%);
+    }
+}
+
 .button-phase-one {
-    animation: startUp 0.5s linear;
+    animation: startUpCircleIntoOut 0.5s linear;
 }
 
 .button-phase-left {
@@ -88,25 +110,7 @@ button {
     transform: translateX(100rem);
 }
 
-/* covering the animation the hover effect */
-
-@keyframes buttonHover {
-    0% {
-        clip-path: rect(0% 100% 100% 100%);
-    }
-    100% {
-        clip-path: rect(0% 100% 100% 0%);
-    }
-}
-
-@keyframes buttonHoverInverted {
-    0% {
-        clip-path: rect(0% 100% 100% 0%);
-    }
-    100% {
-        clip-path: rect(0% 0% 100% 0%);
-    }
-}
+/* button hover effect */
 
 .button-hover .button-hover-selector path {
    clip-path: rect(0% 100% 100% 100%);

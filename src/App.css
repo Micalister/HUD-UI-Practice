@@ -6,12 +6,27 @@ colors!
 #D9DDEF blue white
 */
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 p {
   color: #D9DDEF;
   font-family: "hansson-stencil-mn";
 }
 
 body {
-  background-color: #02040A !important;
-  margin: 2rem;
+  background-color: #02040A;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1440px;
+  max-height: 100vh;
+  overflow-x: hidden;
+  /*overflow-y: hidden;*/
+  margin: 0 auto;
 }

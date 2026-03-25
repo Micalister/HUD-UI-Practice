@@ -1,3 +1,13 @@
+.mouse-hud {    
+    position: relative;
+    top: -3.65rem;
+    left: 0.8rem;
+}
+
+.mouse-hud svg {
+   width: 7rem;
+}
+
 @keyframes startUpLtoRBlinker {
     0% {
         clip-path: rect(0 0% 0% 0);

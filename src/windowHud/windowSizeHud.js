@@ -43,7 +43,7 @@ function WindowSizeHud() {
 
     <div className="WindowSizeHud" id="window-size-hud">
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="174.201" height="124.877" viewBox="0 0 174.201 124.877">
+      <svg width="174.201" height="124.877" viewBox="0 0 174.201 124.877">
 
   <defs>
     <clipPath id="clip-path" >
@@ -59,14 +59,14 @@ function WindowSizeHud() {
 
   <g id="Group_253" data-name="Group 253" transform="translate(-27.377)" opacity="0.22">
     <g  id="Group_252" data-name="Group 252">
-      <g id="Group_251" data-name="Group 251" clip-path="url(#clip-path)">
+      <g id="Group_251" data-name="Group 251" clip-path="">
         <path  className="phase-five" id="Path_639" data-name="Path 639" d="M193.495,25.566V73.123H148.72l-25.169-19.8v-36.9h60.8Z" fill="#2b47be"/>
       </g>
     </g>
   </g>
   <g id="Group_256" data-name="Group 256" transform="translate(-27.377)" opacity="0.22">
     <g id="Group_255" data-name="Group 255">
-      <g id="Group_254" data-name="Group 254" clip-path="url(#clip-path-2)">
+      <g id="Group_254" data-name="Group 254" clip-path="">
         <path className="phase-five" id="Path_640" data-name="Path 640" d="M138.652,78.878v36.9H80.121L68.708,104.365V59.082h44.775Z" fill="#2b47be"/>
       </g>
     </g>

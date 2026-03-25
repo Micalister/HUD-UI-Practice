@@ -1,0 +1,227 @@
+.control-panel-hud {
+    position: relative;
+    bottom: 37.1rem;
+    left: 42.8rem
+}
+
+.control-panel-hud svg {
+    width: 31rem;
+}
+
+.controlPanelBorder {
+
+}
+
+@keyframes controlPanelBorder-left {
+    0% {
+        transform: translateX(8rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes controlPanelBorder-right {
+    0% {
+        transform: translateX(-8rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.controlPanelBorder-left {
+    transform: translateX(8rem);
+    animation: startUpBtoT 0.5s ease-out, controlPanelBorder-left 1s 1.5s forwards;
+}
+
+.controlPanelBorder-middle path {
+    opacity: 0;
+    animation: blinkerBits 1s ease-out 1.5s forwards;
+}
+
+.controlPanelBorder-right {
+    transform: translateX(-8rem);
+    animation: startUpBtoT 0.5s ease-out, controlPanelBorder-right 1s 1.5s forwards;
+}
+
+@keyframes controlPanel-right-button {
+    0% {
+        transform: translateX(-13.5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.controlPanel-right-button {
+    transform: translateX(-13.5rem);
+    animation: controlPanel-right-button 1s ease-out 2s forwards;
+}
+
+.controlPanel-right-button path {
+    transition: fill 0.5s ease-out;
+}
+
+.controlPanel-right-button:hover {
+    cursor: pointer;
+}
+
+.controlPanel-right-button:active circle {
+    fill: #E55213 !important;
+       
+}
+
+.controlPanel-right-button-background {
+    animation: startUpCircleIntoOut 3s ease-out forwards;
+}
+
+.controlPanel-right-button-arrows {
+    clip-path: rect(100% 100% 100% 0%);
+    animation: startUpPanels 1s ease-out 1.5s forwards;
+    
+}
+
+.controlPanel-right-button-circle-border {
+    animation: startUpPanels 1.5s ease-out forwards;
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transition: transform 1.5s ease-out;
+}
+
+.controlPanel-right-button:hover .controlPanel-right-button-circle-border {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transition: transform 4s ease-out;
+    transform: rotate(180deg);
+    fill: #E55213 !important;
+}
+
+.controlPanel-right-button:hover path {
+    fill: #E55213 !important;
+}
+
+
+@keyframes controlPanel-left-button {
+    0% {
+        transform: translateX(13.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.controlPanel-left-button {
+    opacity: 0;
+    transform: translateX(13.5rem);
+    animation: controlPanel-left-button 1s ease-out 2s forwards;
+}
+
+.controlPanel-left-button:hover {
+    cursor: pointer;
+}
+
+.controlPanel-left-button:active ellipse {
+    fill: #E55213 !important;
+    
+}
+
+.controlPanel-left-button-circle-border {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transition: transform 1.5s ease-out;
+}
+
+.controlPanel-left-button:hover .controlPanel-left-button-circle-border {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transition: transform 4s ease-out;
+    transform: rotate(-180deg);
+}
+
+.controlPanel-left-button:hover path {
+    fill: #E55213 !important;
+}
+
+.controlPanel-background {
+    clip-path: circle(0%);
+    animation: startUpCircleIntoOut 1.4s 2s ease-out forwards;
+}
+
+.controlPanel-holders {
+    clip-path: circle(0);
+    animation: startUpCircleIntoOut 1.4s 2.5s ease-out forwards;
+}
+
+.controlPanel-border {
+    clip-path: circle(0);
+    animation: startUpCircleIntoOut 1.4s 2.5s ease-out forwards;
+}
+
+/* nav bar text */
+
+.controlPanel-navBar-text {
+    
+}
+
+.navBar-text-active {
+    color: #E55213;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    font-size: 27px;
+    text-align: center;
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ and Edge */
+    user-select: none;
+    clip-path: rect(100% 100% 100% 0);
+    animation: icon 1s ease-out 2.5s forwards;
+}
+
+.navBar-text-left {
+    color: #2B47BE;
+    font-size: 14px;
+    text-align: left;
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ and Edge */
+    user-select: none;
+    clip-path: rect(100% 100% 100% 0);
+    animation: icon 1s ease-out 2.5s forwards;
+}
+
+.navBar-text-right {
+    color: #2B47BE;
+    font-size: 14px;
+    text-align: right;
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ and Edge */
+    user-select: none;
+    clip-path: rect(100% 100% 100% 0);
+    animation: icon 1s ease-out 2.5s forwards;
+}
+
+
+.in-the-way {
+    display: none;
+}
+
+.test {
+    fill: white !important;
+}
+
+.test-phase-one path {
+    fill: green
+}
+
+.test-phase-two path {
+    fill: red
+}
+

@@ -14,7 +14,7 @@ export default function MouseHud({mousePosition}) {
 
     return(
         <div className="mouse-hud">
-            <svg width="188.151" height="40.321" viewBox="0 0 188.151 40.321">
+            <svg width="128.151" height="40.321" viewBox="0 0 188.151 40.321">
               <defs>
                 <clipPath id="clip-path">
                   <rect id="Rectangle_103" data-name="Rectangle 103" width="108.84" height="19.028" fill="#2b47be"/>

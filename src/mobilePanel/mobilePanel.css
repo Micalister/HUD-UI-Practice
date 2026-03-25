@@ -1,13 +1,3 @@
-
-
-.test {
-    fill: white;
-}
-
-.test-group path{
-    fill: red;
-}
-
 .mobile-right-panel-phase-two-a {
     clip-path: rect(0 0 100% 0);
     animation: leftPanelTtoB 1s 1s linear forwards;
