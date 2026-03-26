@@ -22,6 +22,7 @@ import ControlPanelHud from './controlPanelHud/controlPanelHud.js';
 import PagePortfolio from './pagePortfolio/pagePortfolio.js';
 import PageContact from './pageContact/pageContact.js';
 import PageAboutMe from './pageAboutMe/pageAboutMe.js';
+import BackgroundGrid from './backgroundGrid/backgroundGrid.js';
 
 function App() {
 
@@ -91,8 +92,8 @@ function App() {
         {activePage[pageIndex] === 'About Me' && <PageAboutMe />}
         <TimeHud />
         <RightBorderPanel />
-
-
+        <BackgroundGrid />
+        
         {/* testing all the svg elements and init set up 
           <Button label="Source Code" />
           <Button label="Design Process" />

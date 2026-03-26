@@ -1,3 +1,14 @@
+.right-border-panel {
+    position: relative;
+    top: -126rem;
+    float: right;
+    right: 1rem;
+}
+
+.right-border-panel svg {
+    height: 68vh;
+}
+
 @keyframes right-border-panel-phase-one-right {
     0% {
         fill: red;
