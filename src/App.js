@@ -93,7 +93,7 @@ function App() {
         <TimeHud />
         <RightBorderPanel />
         <BackgroundGrid />
-        
+
         {/* testing all the svg elements and init set up 
           <Button label="Source Code" />
           <Button label="Design Process" />
