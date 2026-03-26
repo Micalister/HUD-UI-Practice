@@ -1,7 +1,37 @@
 .pageContact-container {
-    width: 85vw;
-    height: 60vh;
-    left: 4.5rem;
     position: relative;
-    top: -90rem;
+    top: -132rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pageContact-container svg {
+    width: 50rem;
+    height: 40rem;
+}
+
+.contact-background-panel {
+    clip-path: rect(0 0 0 0);
+    animation: startUpBtoT 0.5s 1s ease-out forwards;
+}
+
+.contact-top-panels {
+    animation: startUp 0.5s ease-out;
+}
+
+.contact-side-panels {
+    clip-path: rect(0 0 0 0);
+    animation: startUpTtoB 0.5s 0.5s ease-out forwards;
+}
+
+.contact-right-bottom {
+    clip-path: rect(0 0 0 0);
+    animation: startUpRtoL 0.5s 1s ease-out forwards;
+}
+
+.contact-left-bottom {
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoR 0.5s 1s ease-out forwards;
 }

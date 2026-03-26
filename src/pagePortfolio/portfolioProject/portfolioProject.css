@@ -1,0 +1,53 @@
+.portfolioProject-container {
+
+}
+
+.portfolioProject-container svg {
+    margin-bottom: 1rem;
+}
+
+.portfolio-project-card-border {
+    animation: startUpTtoB 1s ease-out forwards;
+}
+
+.portfolio-project-card-bottom-border path {
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoR 1s 0.5s ease-out forwards;
+}
+
+.portfolio-project-card-top-border path {
+    clip-path: rect(0 0 0 0);
+    animation: startUpRtoL 1s 0.5s ease-out forwards;
+}
+
+.portfolio-project-card-title {
+    clip-path: rect(0 0 0 0);
+    animation: startUpRtoL 0.5s 1.5s ease-out forwards;
+}
+
+.portfolio-project-card-background {
+    clip-path: rect(0 0 0 0);
+    animation: startUpBtoT 0.2s 1s ease-out forwards;
+    cursor: pointer;
+}
+
+.portfolio-project-card-hover {
+    clip-path: circle(0);
+    transition: clip-path 0.5s ease-out;
+}
+
+.portfolio-project-card-background:hover .portfolio-project-card-hover {
+    clip-path: circle(100%);
+    transition: clip-path 0.5s ease-out;
+}
+
+.portfolio-project-card-hover-ring path {
+    fill: #E55213 !important;
+}
+
+.portfolio-project-card-background:hover .portfolio-project-card-hover-ring {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transition: transform 4s ease-out;
+    transform: rotate(-180deg);
+}

@@ -1,7 +1,45 @@
 .pagePortfolio-container {
-    width: 85vw;
-    height: 60vh;
-    left: 4.5rem;
     position: relative;
-    top: -90rem;
+    left: 5.5rem;
+    top: -95rem;
+}
+
+.pagePortfolio-container svg {
+    width: 64rem;
+    
+}
+
+.portfolio-background-panel {
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoR 0.2s 1s ease-out forwards;
+}
+
+.portfolio-panel-bottom-border circle {
+    animation: startUp 1s ease-out forwards;
+}
+
+.portfolio-panel-bottom-border rect {
+    animation: startUp 1s ease-out forwards;
+}
+
+.portfolio-panel-bottom-border path {
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoR 1s 0.5s ease-out forwards;
+}
+
+.portfolio-panel-top-border circle {
+    animation: startUp 1s ease-out forwards;
+}
+
+.portfolio-panel-top-border path {
+    clip-path: rect(0 0 0 0);
+    animation: startUpRtoL 1s 0.5s ease-out forwards;
+}
+
+/* portfolio-project-list-container */
+
+.portfolio-project-list-container {
+    position: absolute;
+    top: 6.5rem;
+    right: -13.5rem;
 }

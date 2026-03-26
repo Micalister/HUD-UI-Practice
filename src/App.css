@@ -31,3 +31,16 @@ body {
   margin: 0 auto;
   
 }
+
+/* testing the svg */
+.in-the-way {
+    display: none;
+}
+
+.test {
+    fill: white !important;
+}
+
+.test-group path {
+    fill: green
+}

@@ -1,6 +1,6 @@
 .time-hud {
-    position: relative;
-    top: -137.45rem;
+    position: absolute;
+    top: 1.5rem;
     left: 45.3rem;
 }
 
@@ -22,21 +22,4 @@
 .time-hud-text {
     clip-path: rect(0 0 0 0);
     animation: icon 1s 3.5s forwards;
-}
-
-/* testing the svg */
-.in-the-way {
-    display: none;
-}
-
-.test {
-    fill: white !important;
-}
-
-.test-phase-one path {
-    fill: green
-}
-
-.test-phase-two path {
-    fill: red
 }

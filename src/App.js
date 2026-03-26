@@ -67,13 +67,13 @@ function App() {
 
   if (activePage[pageIndex] === 'Portfolio') {
     // Logic for portfolio page
-    console.log('Portfolio page is active');
+    
   } else if (activePage[pageIndex] === 'Contact') {
     // Logic for contact page
-    console.log('Contact page is active');
+    
   } else if (activePage[pageIndex] === 'About Me') {
     // Logic for about me page
-    console.log('About Me page is active');
+    
   }
   
 
@@ -87,12 +87,12 @@ function App() {
         <BottomPanel />
         <Alister />
         <ControlPanelHud activePage={activePage} pageIndex={pageIndex} setPageIndex={setPageIndex} />
+        <RightBorderPanel />
+        <BackgroundGrid />
         {activePage[pageIndex] === 'Portfolio' && <PagePortfolio />}
         {activePage[pageIndex] === 'Contact' && <PageContact />}
         {activePage[pageIndex] === 'About Me' && <PageAboutMe />}
         <TimeHud />
-        <RightBorderPanel />
-        <BackgroundGrid />
 
         {/* testing all the svg elements and init set up 
           <Button label="Source Code" />
