@@ -1,9 +1,16 @@
-import './pageContact.css'
+import './pageContact.css';
+import { useState } from 'react';
+import Button from '../button/button.js';
+import InputField from '../inputFeild/inputField.js';
+import InputMessageBox from '../inputMessageBox/inputMessageBox.js';
 
-export default function PageContact() {
+export default function PageContact({ inputValue, onInputChange, messageValue, onMessageChange }) {
+
+    
+
     return (
         <div className="pageContact-container">
-            <svg width="944.3" height="622.766" viewBox="0 0 944.3 622.766">
+            <svg className="pageContact-container-svg" width="944.3" height="622.766" viewBox="0 0 944.3 622.766">
 
                 <g id="Group_1011" data-name="Group 1011" transform="translate(-488 -70.041)">
                     
@@ -67,8 +74,28 @@ export default function PageContact() {
                         <path id="Path_12500" data-name="Path 12500" d="M0,0,7.151,7.151H96.51L103.647.014Z" transform="translate(1306.614 77.609)" fill="#2b47be"/>
                     </g>
                 </g>
-                </svg>
 
+                <foreignObject width="100%" height="100%">
+                    <div className="contact-form-container">
+                        <h1>Let's Get in Touch</h1>
+                        <div className="contact-form-container-form">
+                            <div className="contact-form-container-form-inputs">
+                                <InputField placeholder="Name..." inputValue={inputValue} onChange={onInputChange} />
+                                <InputField placeholder="Email..." inputValue={inputValue} onChange={onInputChange} />
+                                <InputField placeholder="Subject..." inputValue={inputValue} onChange={onInputChange} />
+                            </div>
+                            <div>
+                                <InputMessageBox placeholder="Message..." messageValue={messageValue} onChange={onMessageChange} />
+                            </div>
+                        </div>
+                        <div className="contact-form-container-submit">
+                            <Button label="Submit" />
+                        </div>
+                    </div>
+                </foreignObject>
+
+                </svg>
+        
         </div>
     )
 }

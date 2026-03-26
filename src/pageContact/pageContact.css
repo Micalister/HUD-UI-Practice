@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.pageContact-container svg {
+.pageContact-container-svg {
     width: 50rem;
     height: 40rem;
 }
@@ -34,4 +34,33 @@
 .contact-left-bottom {
     clip-path: rect(0 0 0 0);
     animation: startUpLtoR 0.5s 1s ease-out forwards;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.contact-form-container h1 {
+    margin-bottom: 4rem;
+
+}
+
+.contact-form-container-form {
+    display: flex;
+    grid-gap: 3rem
+}
+
+.contact-form-container-form-inputs {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+
+}
+
+.contact-form-container-submit {
+    margin-top: 4rem;
 }

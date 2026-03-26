@@ -21,6 +21,13 @@ body {
   background-color: #02040A;
 }
 
+h1 {
+  color: #D9DDEF;
+  font-family: "hansson-stencil-mn";
+  font-size: 3rem;
+  font-weight: 800;
+}
+
 .App {
   width: 100vw;
   height: 100vh;

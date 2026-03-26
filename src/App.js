@@ -90,7 +90,7 @@ function App() {
         <RightBorderPanel />
         <BackgroundGrid />
         {activePage[pageIndex] === 'Portfolio' && <PagePortfolio />}
-        {activePage[pageIndex] === 'Contact' && <PageContact />}
+        {activePage[pageIndex] === 'Contact' && <PageContact inputValue={inputValue} onInputChange={inputHandleChange} messageValue={messageValue} onMessageChange={messageHandleChange} />}
         {activePage[pageIndex] === 'About Me' && <PageAboutMe />}
         <TimeHud />
 
