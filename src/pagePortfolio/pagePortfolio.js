@@ -3,24 +3,28 @@ import PortfolioProject from './portfolioProject/portfolioProject.js';
 import { useState } from 'react';
 
 export default function PagePortfolio() {
-
+    /* This is the list of available projects */
     const projectArray = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5'];
 
+    /* Sets the initial state for the list of projects to display on the main panel*/
     const [projects, setProjects] = useState(projectArray);
 
+    /* sets the state for the list */
     const [activeProject, setActiveProject] = useState(projectArray[0]);
 
+    /* passed the click into the PortfolioProject component to update the active project */
     const handleProjectClick = (project) => {
         setActiveProject(project);
     }
 
+    /* handles the changes in the project list to update the main panel */
     function renderProjectList() {
     // This creates a temporary list for display without changing the 'projects' state
     return projects
         .filter(project => project !== activeProject)
         .map((project, index) => (
             <PortfolioProject 
-                key={project} // Use the name as a key instead of index for better stability
+                key={project}
                 project={project} 
                 handleProjectClick={handleProjectClick} 
             />
@@ -101,13 +105,7 @@ export default function PagePortfolio() {
 
                 {/* {Project switcher} */}
                 <div className="portfolio-project-list-container">
-                    {/*<PortfolioProject project={projectArray[0]} handleProjectClick={handleProjectClick} />
-                    <PortfolioProject project={projectArray[1]} handleProjectClick={handleProjectClick} />
-                    <PortfolioProject project={projectArray[2]} handleProjectClick={handleProjectClick} />
-                    <PortfolioProject project={projectArray[3]} handleProjectClick={handleProjectClick} />*/}
-                    {
-                        renderProjectList()
-                    }
+                    {renderProjectList()}
                 </div>
 
         </div>
