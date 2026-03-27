@@ -41,5 +41,10 @@
 .portfolio-project-list-container {
     position: absolute;
     top: 6.5rem;
-    right: -13.5rem;
+    right: 50.55rem;
+    width: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

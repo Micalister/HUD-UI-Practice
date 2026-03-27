@@ -6,7 +6,7 @@ export default function PortfolioProject({project, handleProjectClick}) {
 
     return (
         <div className="portfolioProject-container">
-            <svg width="" height="128.77" viewBox="0 0 274.838 168.771" onClick={() => handleProjectClick(project)}>
+            <svg width="" height="128.77" viewBox="0 0 274.838 168.771">
                 <defs>
                     <clipPath id="clip-path">
                     <rect id="Rectangle_399" data-name="Rectangle 399" width="260.94" height="156.03" fill="#2b47be"/>
@@ -16,7 +16,7 @@ export default function PortfolioProject({project, handleProjectClick}) {
                 {/* background */}
                 <g id="Group_462" data-name="Group 462" transform="translate(13.898 0.392)">
                     <g className="portfolio-project-card-background" id="Group_461" data-name="Group 461" clip-path="">
-                    <path id="Path_11523" data-name="Path 11523" d="M6.032,135.981V.333H91.583l19.624,10.04h135.45l20.315,10.37V156.363H180.34l-20.847-9.995H26.4Z" transform="translate(-6.032 -0.333)" fill="#2b47be" opacity="0.22"/>
+                    <path onClick={() => handleProjectClick(project)} id="Path_11523" data-name="Path 11523" d="M6.032,135.981V.333H91.583l19.624,10.04h135.45l20.315,10.37V156.363H180.34l-20.847-9.995H26.4Z" transform="translate(-6.032 -0.333)" fill="#2b47be" opacity="0.22"/>
                     
                     <g className="portfolio-project-card-hover" id="Group_1015" data-name="Group 1015" transform="translate(71.483 50) rotate(90)">
                         <circle id="Ellipse_2" data-name="Ellipse 2" cx="22.5" cy="22.5" r="22.5" transform="translate(8.241 8.242)" fill="#2b47be"/>
