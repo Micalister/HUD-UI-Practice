@@ -36,6 +36,60 @@
     animation: startUpRtoL 1s 0.5s ease-out forwards;
 }
 
+/* Portfolio content */
+
+.portfolio-content-grid-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0rem;
+    margin-top: 2rem;
+}
+
+.portfolio-content-grid-area-1 {
+    display: flex;
+    flex-direction: column;
+    height: 36rem;
+    padding: 0.5rem;
+    width: 48.5rem;
+}
+
+.portfolio-content-switcher-and-buttons {
+    display: flex;
+    transform: translateY(2rem) translateX(2rem);
+}
+
+.portfolio-content-switcher svg{
+    width: 20rem;
+}
+
+.portfolio-content-buttons {
+    display: flex;
+}
+
+.portfolio-content-buttons svg {
+    width: 13rem;
+}
+
+.portfolio-content-grid-area-2 {
+    height: 40rem;
+    padding: 0.5rem;
+}
+
+.portfolio-content-grid-area-2-title {
+    margin: 1.5rem 0.5rem;
+}
+
+.portfolio-content-grid-area-2-title h1 {
+    transform: translateX(2rem);
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoR 1s 1.5s ease-out forwards;
+}
+
+.portfolio-content-grid-area-2-title svg {
+    clip-path: rect(0 0 0 0);
+    animation: startUpLtoR 1s 1.5s ease-out forwards;
+}
+
 /* portfolio-project-list-container */
 
 .portfolio-project-list-container {
@@ -47,4 +101,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.portfolio-tech-stack {
+    font-size: 1rem;
 }

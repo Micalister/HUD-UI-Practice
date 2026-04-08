@@ -1,0 +1,80 @@
+@keyframes portfolio-button {
+    0% {
+        transform: translateX(-17.5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.portfolio-content-switcher-container {
+    margin-right: 0.2rem;
+}
+
+.controlPanel-right-button.portfolio-button {
+    transform: translateX(-17.5rem);
+    animation: portfolio-button 1s ease-out 2s forwards;
+}
+
+.controlPanel-background.portfolio-button-background {
+    animation: startUpLtoR 1s ease-out 2s forwards;
+}
+
+.portfolio-content-switcher-clickable-area {   
+    cursor: pointer;
+}
+
+.portfolio-content-switcher-clickable-area:active circle {
+    fill: #E55213 !important;
+}
+
+.portfolio-content-switcher-clickable-area:hover rect {
+    stroke: #E55213 !important;
+}
+
+/* testing a flash click effect for state changes could be global */
+
+@keyframes flash-click {
+    0% {
+        clip-path: rect(0 0 0 0);
+        opacity: .11;
+    }
+    50% {
+        clip-path: rect(0 100% 100% 0);
+        opacity: .22;
+    }
+    100% {
+        clip-path: rect(0 0 0 0);
+        opacity: 0;
+    }
+}
+
+.flash-click {
+    clip-path: rect(0 0 0 0) !important;
+    opacity: 0;
+    transition: clip-path 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.portfolio-content-switcher-clickable-area:active .flash-click {
+    clip-path: rect(0 100% 100% 0) !important;
+   /*transition: clip-path 0.2s ease-out, opacity 0.2s ease-out;*/
+   animation: flash-click 1s ease-out forwards;
+    opacity: .22;
+}
+
+.portfolio-content-switcher-clickable-area:hover .controlPanel-right-button-circle-border {
+    transform-origin: center !important;
+    transform-box: fill-box;
+    transition: transform 4s ease-out;
+    transform: rotate(-180deg);
+}
+
+.portfolio-content-switcher-clickable-area:hover .controlPanel-right-button-circle-border path {
+    fill: #E55213 !important;
+}
+
+.controlPanel-pagination {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}

@@ -1,0 +1,53 @@
+.portfolio-slider-container {
+    transform: translateY(1rem) translateX(1rem);
+}
+
+.portfolio-slider-container svg {
+    width: 48rem;
+}
+
+@keyframes slider-right-button {
+        0% {
+            transform: translateX(-22rem);
+        }
+        100% {
+            transform: translateX(0rem);
+        }
+}
+
+.controlPanel-right-button.slider-right-button {
+    transform: translateX(-22rem);
+    animation: slider-right-button 1s 2s ease-out forwards;
+}
+
+@keyframes slider-left-button {
+        0% {
+            transform: translateX(22rem);
+        }
+        100% {
+            transform: translateX(0rem);
+            opacity: 1;
+        }
+}
+
+.controlPanel-left-button.slider-left-button {
+    transform: translateX(22rem);
+    animation: slider-left-button 1s ease-out 2s forwards;
+    
+}
+
+.sliderImgs {
+    width: 100%;
+    object-fit: contain !important;
+    object-position: center;
+    opacity: 0;
+    animation: startUpBlink 0.5s 2.8s ease-out forwards;
+}
+
+.portfolioSliderIndex {
+    color: #E55213;
+    font-family: "hansson-stencil-mn";
+    font-size: 1.2rem;
+    clip-path: rect(0 0 0 0);
+    animation: icon 1s 2.8s ease-out forwards;
+}

@@ -1,10 +1,14 @@
 import './pagePortfolio.css'
+import { useState, useEffect  } from 'react';
 import PortfolioProject from './portfolioProject/portfolioProject.js';
-import { useState } from 'react';
+import Button from '../button/button.js';
+import PortfolioContentSwitcher from './portfolioContentSwitcher/portfolioContentSwitcher.js';
+import PortfolioSlider from './portfolioSlider/portfolioSlider.js';
+
 
 export default function PagePortfolio() {
     /* This is the list of available projects */
-    const projectArray = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5'];
+    const projectArray = ['Donut Ship.IO', 'Project 2', 'Project 3', 'Project 4', 'Project 5'];
 
     /* Sets the initial state for the list of projects to display on the main panel*/
     const [projects, setProjects] = useState(projectArray);
@@ -29,12 +33,91 @@ export default function PagePortfolio() {
                 handleProjectClick={handleProjectClick} 
             />
         ));
-}
+    }
+
+    /* The initial projects objects */
+
+    const stagingProject1 = {
+        ID: 'Donut Ship.IO',
+        title: 'Donut Ship.IO',
+        build: '1 • HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D',
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`,
+        images: ['DonutCover', 'PlaceholderImg', 'PlaceholderImg'],
+        link: 'https://www.google.com',
+        sourceCode: 'https://www.github.com',
+        designProcess: 'https://www.github.com' 
+    };
+
+    const stagingProject2 = {
+        ID: 'Project 2',
+        title: 'Project 2',
+        build: '2 • HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D',
+        description: 'This is a description of Project 2. It is a very cool project that I worked on.',
+        images: ['PlaceholderImg', 'PlaceholderImg', 'PlaceholderImg'],
+        link: 'https://www.google.com',
+        sourceCode: 'https://www.github.com',
+        designProcess: 'https://www.github.com' 
+    };
+
+    const stagingProject3 = {
+        ID: 'Project 3',
+        title: 'Project 3',
+        build: '3 • HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D',
+        description: 'This is a description of Project 3. It is a very cool project that I worked on.',
+        images: ['PlaceholderImg', 'PlaceholderImg', 'PlaceholderImg'],
+        link: 'https://www.google.com',
+        sourceCode: 'https://www.github.com',
+        designProcess: 'https://www.github.com' 
+    };
+
+    const stagingProject4 = {
+        ID: 'Project 4',
+        title: 'Project 4',
+        build: '4 • HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D',
+        description: 'This is a description of Project 4. It is a very cool project that I worked on.',
+        images: ['PlaceholderImg', 'PlaceholderImg', 'PlaceholderImg'],
+        link: 'https://www.google.com',
+        sourceCode: 'https://www.github.com',
+        designProcess: 'https://www.github.com' 
+    };
+
+    const stagingProject5 = {
+        ID: 'Project 5',
+        title: 'Project 5',
+        build: '5 • HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D',
+        description: 'This is a description of Project 5. It is a very cool project that I worked on.',
+        images: ['PlaceholderImg', 'PlaceholderImg', 'PlaceholderImg'],
+        link: 'https://www.google.com',
+        sourceCode: 'https://www.github.com',
+        designProcess: 'https://www.github.com' 
+    };
+
+    /* a list of all staging projects */
+    const stagingProjectsList = [stagingProject1, stagingProject2, stagingProject3, stagingProject4, stagingProject5];
+
+    /* matches the activeProject to the corresponding staging project */
+    const stagingProject = stagingProjectsList.find(project => project.ID === activeProject);
+
+
+    /* Creates a function that will halt the content rendering from the panel rendering */
+
+    
+        const [shouldRender, setShouldRender] = useState(false);
+
+        useEffect(() => {
+            // Set a timer to change state after 1000ms (1 second)
+            const timer = setTimeout(() => {
+            setShouldRender(true);
+            }, 1500);
+
+            // Cleanup timer if component unmounts before 1 second
+            return () => clearTimeout(timer);
+        }, []);
 
     return (
         <div className="pagePortfolio-container">
             <svg width="1353.989" height="754.493" viewBox="0 0 1353.989 754.493">
-                <text style={{clipPath: 'rect(0 0 0 0)', animation: 'startUpRtoL 0.5s 1.5s ease-out forwards'}} transform="translate(68.04 100.25)" fill="#e55213" font-size="40" font-family="Hansson-Stencil-MN">{activeProject}</text>
+                {/*<text style={{clipPath: 'rect(0 0 0 0)', animation: 'startUpRtoL 0.5s 1.5s ease-out forwards'}} transform="translate(68.04 100.25)" fill="#e55213" font-size="40" font-family="Hansson-Stencil-MN">{activeProject} {stagingProject.ID}</text>*/}
                 <g id="Group_962" data-name="Group 962" transform="translate(-94.483 -4524)">
                     {/* background panel */}
                     <path className="portfolio-background-panel" id="Path_12815" data-name="Path 12815" d="M13449.454,114.495l274.833.314,7.193,6.823,813.393-1.857,7.837,2.147,18.973-15.249,198.595.892,6.739,5.463.814,272.767-3.791,3.791V794.047l-47.08,14.012H14227.4l-20.3-20.3V707.037l-13.351-13.188h-745.785l-7.842-7.841V513.282l8.334-8.334V285.06h-7.378V121.632Z" transform="translate(-13337.504 4441)" fill="#2b47be" opacity="0.22"/>
@@ -101,6 +184,117 @@ export default function PagePortfolio() {
                         <path id="Path_12717" data-name="Path 12717" d="M13518.5,1301.5l-10.012,10.012v159.925h12.183V1575.71" transform="translate(-13404 -1182)" fill="none" stroke="#2b47be" stroke-width="1"/>
                     </g>
                 </g>
+
+                {shouldRender ? (<foreignObject width="100%" height="100%">
+                    <div className="portfolio-content-grid-containers">
+                        {/* The left side grid area */}
+                        <div className="portfolio-content-grid-area-1">
+                            <PortfolioSlider stagingProject={stagingProject} />
+                            <div className="portfolio-content-switcher-and-buttons">
+                                <div className="portfolio-content-switcher">
+                                    <PortfolioContentSwitcher />
+                                </div>
+                                <div className="portfolio-content-buttons">
+                                    <Button label="Launch" />
+                                    <Button label="Source Code" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* The right side grid area */}
+                        <div className="portfolio-content-grid-area-2">
+
+                            {/* The title Section */}
+                            <div className="portfolio-content-grid-area-2-title">
+                                <h1>{stagingProject.title}</h1>
+                                <svg width="487.06" height="14.079" viewBox="0 0 487.06 14.079">
+                                    <g id="Group_1017" data-name="Group 1017" transform="translate(-1185.031 -213.799)">
+                                        <path id="Path_11678" data-name="Path 11678" d="M393.134,14.079,379.681,1.268H0V0H380.233l13.454,12.811H487.06v1.268Z" transform="translate(1432.091 227.879) rotate(180)" fill="#2b47be"/>
+                                        <g id="Group_1016" data-name="Group 1016">
+                                            <rect id="Rectangle_431" data-name="Rectangle 431" width="266.464" height="3.317" transform="translate(1136.844 213.799)" fill="#2b47be"/>
+                                            <path id="Path_11679" data-name="Path 11679" d="M103.647,0,96.5,7.151H7.137L0,.014Z" transform="translate(1044.502 213.799)" fill="#2b47be"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            {/* This will be a list of tech stack items */}
+                            <svg width="487.06" height="61.41" viewBox="0 0 487.06 61.41">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                    <rect id="Rectangle_227" data-name="Rectangle 227" width="487.059" height="45.532" fill="#2b47be"/>
+                                    </clipPath>
+                                </defs>
+                                <g id="Group_1018" data-name="Group 1018" transform="translate(-1185.031 -255.111)">
+                                    <g id="Group_971" data-name="Group 971" transform="translate(350.931 -52.478)">
+                                    <g id="Group_421" data-name="Group 421" transform="translate(594.102 307.59)" opacity="0.22">
+                                        <g id="Group_420" data-name="Group 420">
+                                        <g id="Group_419" data-name="Group 419">
+                                            <rect className="input-field-phase-three" id="Rectangle_226" data-name="Rectangle 226" width="487.06" height="45.531" transform="translate(-0.001 0)" fill="#2b47be"/>
+                                        </g>
+                                        </g>
+                                    </g>
+                                    <rect className="input-field-phase-one" id="Rectangle_234" data-name="Rectangle 234" width="8.552" height="45.531" transform="translate(594.101 307.59)" fill="#2b47be"/>
+                                    </g>
+                                    {/*<text className="input-field-phase-three" transform="translate(967.265 255.434)" fill="#d9ddef" font-size="13" font-family="Hansson-Stencil-MN"><tspan x="0" y="11">BUILD:</tspan><tspan x="0" y="25" width="4rem">• HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D</tspan></text>*/}
+                                     
+                                    <foreignObject width="29rem" height="3rem" transform="translate(967.265 255.434)">
+                                        <p className="portfolio-tech-stack">Build: {stagingProject.build}</p>
+                                    </foreignObject>
+                                    </g>
+                            </svg>
+
+                            {/* This will be the text section */}
+                            <svg width="484.923" height="437.241" viewBox="0 0 484.923 437.241">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                    <rect id="Rectangle_231" data-name="Rectangle 231" width="484.922" height="415.849" fill="#2b47be"/>
+                                    </clipPath>
+                                </defs>
+                                <g id="Group_1022" data-name="Group 1022" transform="translate(-1185.031 -319.895)">
+                                    <g id="Group_1020" data-name="Group 1020">
+                                    <g id="Group_427" data-name="Group 427" transform="translate(945.032 319.897)" opacity="0.22">
+                                        <g id="Group_426" data-name="Group 426" transform="translate(0)">
+                                        <g id="Group_425" data-name="Group 425" clip-path="">
+                                            <rect className="input-field-phase-three" id="Rectangle_230" data-name="Rectangle 230" width="484.923" height="415.849" transform="translate(-0.001 -0.008)" fill="#2b47be"/>
+                                        </g>
+                                        </g>
+                                    </g>
+                                    <rect className="input-field-phase-one" id="Rectangle_236" data-name="Rectangle 236" width="8.55" height="415.851" transform="translate(945.031 319.895)" fill="#2b47be"/>
+                                    </g>
+                                    <g className="input-field-phase-two">
+                                    <g id="Group_1019" data-name="Group 1019">
+                                    <g id="Group_488" data-name="Group 488" transform="translate(1224.022 740.585)">
+                                        <path id="Path_10810" data-name="Path 10810" d="M292.914,112.755l-8.141,7.882H232.4l-7.021,6.8H163.525l-7.481-7.242H144.339l-8.024-7.765Z" transform="translate(-134.393 -111.653)" fill="#2b47be"/>
+                                        <path id="Path_10811" data-name="Path 10811" d="M227.15,128.78H164.639l-7.481-7.242H145.453l-9.616-9.309,1.921,0,158.513.335-9.728,9.414H234.172ZM165.3,127.243h61.2l7.021-6.8h52.372l6.558-6.349-152.765-.324L146.109,120h11.706Z" transform="translate(-135.837 -112.229)" fill="#2b47be"/>
+                                    </g>
+                                    <g id="Group_487" data-name="Group 487" transform="translate(1381.432 741.045)">
+                                        <path id="Path_10814" data-name="Path 10814" d="M177.553,120.679h15.867l8.4-8.135h-18l-8.431,8.162Z" transform="translate(-173.455 -111.776)" fill="#2b47be"/>
+                                        <path id="Path_10815" data-name="Path 10815" d="M174.913,122.069l10.043-9.722H205.2l-9.99,9.672Zm10.7-8.186-6.82,6.6.217,0h15.537l6.816-6.6Z" transform="translate(-174.913 -112.347)" fill="#2b47be"/>
+                                    </g>
+                                    <g id="Group_486" data-name="Group 486" transform="translate(1408.683 741.045)">
+                                        <path id="Path_10816" data-name="Path 10816" d="M184.319,120.679h5.849l8.4-8.135h-7.98l-8.431,8.162Z" transform="translate(-180.219 -111.776)" fill="#2b47be"/>
+                                        <path id="Path_10817" data-name="Path 10817" d="M181.678,122.069l10.047-9.722h10.224l-9.99,9.672Zm10.7-8.186-6.82,6.6.218,0H191.3l6.816-6.6Z" transform="translate(-181.678 -112.347)" fill="#2b47be"/>
+                                    </g>
+                                    </g>
+                                        <circle id="Ellipse_27" data-name="Ellipse 27" cx="4.5" cy="4.5" r="4.5" transform="translate(1209 748)" fill="#2b47be"/>
+                                        <path id="Path_12824" data-name="Path 12824" d="M-9328.152,727.254h220.479l12.558,12.558h26.577" transform="translate(10278 13)" fill="none" stroke="#2b47be" stroke-width="2"/>
+                                    </g>
+                                    {/*<text className="input-field-phase-three" transform="translate(963.699 327.855)" fill="#d9ddef" font-size="18" font-family="Hansson-Stencil-MN"><tspan x="0" y="15">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR </tspan><tspan x="0" y="34">ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT </tspan><tspan x="0" y="53">UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD </tspan><tspan x="0" y="72">MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO </tspan><tspan x="0" y="91">LABORIS NISI UT ALIQUIP EX EA COMMODO </tspan><tspan x="0" y="110">CONSEQUAT.</tspan><tspan x="0" y="129"></tspan><tspan x="0" y="148">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR </tspan><tspan x="0" y="167">ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT </tspan><tspan x="0" y="186">UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD </tspan><tspan x="0" y="205">MINIM VENIAM.</tspan></text>*/}
+                                    <foreignObject width="29rem" height="80rem" transform="translate(967.265 325.434)" style={{border: '2spx solid red'}}>
+                                        <p className="portfolio-tech-stack">Build: {stagingProject.description}</p>
+                                    </foreignObject>
+                                </g>
+                                </svg>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </foreignObject>) : null}
                 </svg>
 
                 {/* {Project switcher} */}

@@ -2,8 +2,6 @@ import './portfolioProject.css'
 
 export default function PortfolioProject({project, handleProjectClick}) {
 
-    
-
     return (
         <div className="portfolioProject-container">
             <svg width="" height="128.77" viewBox="0 0 274.838 168.771">

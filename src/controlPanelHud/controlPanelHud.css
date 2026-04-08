@@ -128,6 +128,11 @@
     
 }
 
+.controlPanel-left-button:active circle {
+    fill: #E55213 !important;
+    
+}
+
 .controlPanel-left-button-circle-border {
     transform-origin: center !important;
     transform-box: fill-box;
