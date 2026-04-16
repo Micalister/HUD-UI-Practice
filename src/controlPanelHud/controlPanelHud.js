@@ -1,20 +1,61 @@
 import './controlPanelHud.css'
+import { useState, useEffect } from 'react';
 
 export default function ControlPanelHud({ activePage, pageIndex, setPageIndex }) {
 
     /* Logic for the control panel navigation bar to switch between pages. 
         state is handled in the App.js and passed down as props */
+
+    /* handles the switching of animation classes in the array that is changed based off the click direction of the control hud */
+    const [animationSwitch, setAnimationSwitch] = useState(false);
     
     const pageRight = ['Contact', 'About Me', 'Portfolio'];
     const pageLeft = ['About Me', 'Portfolio', 'Contact'];
 
+
+    //const MobilePanelActiveClass = isActive ? 'class1' : 'class2';
+
+
+    const activePageTriangleRight = animationSwitch ? ['shift-AboutMe-L ', 'pop-AboutMe-L ', 'active-AboutMe-L '] : ['shift-AboutMe-R ', 'pop-AboutMe-R ', 'active-AboutMe-R '];
+    const activePageTriangleLeft = animationSwitch ? ['pop-Contact-L', 'active-Contact-L', 'shift-Contact-L'] : ['pop-Contact-R', 'active-Contact-R', 'shift-Contact-R'];
+
+    /* active index */
+    const activePageTriangle = animationSwitch ? ['active-Portfolio-L', 'shift-Portfolio-L', 'pop-Portfolio-L'] : ['active-Portfolio-R', 'shift-Portfolio-R', 'pop-Portfolio-R'];
+    const [trianglePages, setTrianglePages] = useState(0); 
+
+
     const handlePageClickRight = () => {
         setPageIndex((prevIndex) => (prevIndex + 1) % activePage.length);
+        setTrianglePages((triangleIndex) => (triangleIndex + 1) % activePage.length);
+        if (animationSwitch == true) {
+            setAnimationSwitch(!animationSwitch);
+            console.log('switching to false');
+        };
     };
 
     const handlePageClickLeft = () => {
         setPageIndex((prevIndex) => (prevIndex - 1 + activePage.length) % activePage.length);
+        setTrianglePages((triangleIndex) => (triangleIndex - 1 + activePage.length) % activePage.length);
+        if (animationSwitch == false) {
+            setAnimationSwitch(!animationSwitch);
+            console.log('switching to true');
+        }
     };
+
+    /* Creates a function that will halt the content rendering from the panel rendering */
+    
+        
+            const [shouldRender, setShouldRender] = useState(false);
+    
+            useEffect(() => {
+                // Set a timer to change state after 1000ms (1 second)
+                const timer = setTimeout(() => {
+                setShouldRender(true);
+                }, 2500);
+    
+                // Cleanup timer if component unmounts before 1 second
+                return () => clearTimeout(timer);
+            }, []);
 
     return (
 
@@ -56,14 +97,20 @@ export default function ControlPanelHud({ activePage, pageIndex, setPageIndex })
                     </g>
 
                     <g className="controlPanel-navBar-text">
-                        <foreignObject x="" y="" width="100px" height="100px" transform="translate(848.855 229.019)">
-                            <p className="navBar-text-left" >{pageLeft[pageIndex]}</p>
+                        <foreignObject x="" y="" width="100px" height="100px" transform='translate(848.855 229.019)'>
+                            <p className="navBar-text-left in-the-way" >About Me{/*{pageLeft[pageIndex]}*/}</p>
                         </foreignObject> 
-                        <foreignObject x="" y="" width="150px" height="100px" transform="translate(948.855 222.019)">
-                            <p className="navBar-text-active" >{activePage[pageIndex]}</p>
-                        </foreignObject>
+
+                        {shouldRender ? (<foreignObject x="" y="" width="20rem" height="100px" transform='translate(835.855 204.019)' className="navbar-foreignObject">
+                            <div className="navbar-text-container">
+                                <p className={activePageTriangleRight[pageIndex]}>About Me{/*{pageLeft[pageIndex]}*/}</p>
+                                <p className={activePageTriangle[pageIndex]} >Portfolio{/*{activePage[pageIndex]}*/}</p>
+                                <p className={activePageTriangleLeft[pageIndex]} >Contact{/*{pageRight[pageIndex]}*/}</p>
+                            </div>
+                        </foreignObject>) : null}
+
                         <foreignObject x="" y="" width="100px" height="100px" transform="translate(1090.855 229.019)">
-                            <p className="navBar-text-right" >{pageRight[pageIndex]}</p>
+                            <p className="navBar-text-right in-the-way" >Contact{/*{pageRight[pageIndex]}*/}</p>
                         </foreignObject> 
                     </g>
                     

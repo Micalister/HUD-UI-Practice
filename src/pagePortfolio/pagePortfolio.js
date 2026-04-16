@@ -238,7 +238,7 @@ export default function PagePortfolio() {
                                     </g>
                                     {/*<text className="input-field-phase-three" transform="translate(967.265 255.434)" fill="#d9ddef" font-size="13" font-family="Hansson-Stencil-MN"><tspan x="0" y="11">BUILD:</tspan><tspan x="0" y="25" width="4rem">• HTML5 • CCS3 • JAVASCRIPT • REACT.JS • ADOBE ILLUSTRATOR • ADOBE XD • NET • SQL • C# • ADOBE 3D</tspan></text>*/}
                                      
-                                    <foreignObject width="29rem" height="3rem" transform="translate(967.265 255.434)">
+                                    <foreignObject width="29rem" height="3rem" transform="translate(967.265 258.434)">
                                         <p className="portfolio-tech-stack">Build: {stagingProject.build}</p>
                                     </foreignObject>
                                     </g>
@@ -282,7 +282,7 @@ export default function PagePortfolio() {
                                     </g>
                                     {/*<text className="input-field-phase-three" transform="translate(963.699 327.855)" fill="#d9ddef" font-size="18" font-family="Hansson-Stencil-MN"><tspan x="0" y="15">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR </tspan><tspan x="0" y="34">ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT </tspan><tspan x="0" y="53">UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD </tspan><tspan x="0" y="72">MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO </tspan><tspan x="0" y="91">LABORIS NISI UT ALIQUIP EX EA COMMODO </tspan><tspan x="0" y="110">CONSEQUAT.</tspan><tspan x="0" y="129"></tspan><tspan x="0" y="148">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR </tspan><tspan x="0" y="167">ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT </tspan><tspan x="0" y="186">UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD </tspan><tspan x="0" y="205">MINIM VENIAM.</tspan></text>*/}
                                     <foreignObject width="29rem" height="80rem" transform="translate(967.265 325.434)" style={{border: '2spx solid red'}}>
-                                        <p className="portfolio-tech-stack">Build: {stagingProject.description}</p>
+                                        <p className="portfolio-tech-stack">{stagingProject.description}</p>
                                     </foreignObject>
                                 </g>
                                 </svg>

@@ -173,43 +173,530 @@
 
 .navBar-text-active {
     color: #E55213;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 5px;
     font-size: 27px;
     text-align: center;
-    pointer-events: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ and Edge */
-    user-select: none;
-    clip-path: rect(100% 100% 100% 0);
-    animation: icon 1s ease-out 2.5s forwards;
 }
 
 .navBar-text-left {
-    color: #2B47BE;
-    font-size: 14px;
-    text-align: left;
-    pointer-events: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ and Edge */
-    user-select: none;
-    clip-path: rect(100% 100% 100% 0);
-    animation: icon 1s ease-out 2.5s forwards;
+    
 }
 
 .navBar-text-right {
     color: #2B47BE;
     font-size: 14px;
     text-align: right;
+}
+
+.navbar-foreignObject {
+    width: 23rem;
+    height: 4rem;
+    /*border: 1px solid red;*/
+    padding: 0.1rem;
+}
+
+.navbar-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.navbar-text-container p {
     pointer-events: none;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ and Edge */
     user-select: none;
-    clip-path: rect(100% 100% 100% 0);
-    animation: icon 1s ease-out 2.5s forwards;
 }
 
+/* Animations for the shifting of the nav bar text */
+/* The default right click animations */
+    /* for Portfolio */
+
+    @keyframes active-Portfolio-R {
+        0% {
+            transform: translateX(9.5rem);
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: right;
+        }
+        100% {
+            transform: translateX(0rem);
+            color: #E55213;
+            font-size: 27px;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+        }
+    }
+
+    .active-Portfolio-R {
+        transform: translateX(9.5rem);
+        color: #2B47BE;
+        font-size: 14px;
+        text-align: right;
+        animation: active-Portfolio-R 1s ease-out forwards;
+    }
+
+    @keyframes shift-Portfolio-R{
+        0% {
+            transform: translateX(0rem);
+            color: #E55213;
+            font-size: 27px;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+        }
+        100% {
+            transform: translateX(-8rem);
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+
+    .shift-Portfolio-R {
+        color: #2B47BE;
+        font-size: 14px;
+        text-align: left;
+        animation: shift-Portfolio-R 1s ease-out forwards;
+    }
+
+    @keyframes pop-Portfolio-R {
+        0% {
+            transform: translateX(-9.3rem);
+        }
+        20% {
+            transform: translateX(-14.3rem) translateY(-1rem);
+        }
+        30% {
+            opacity: 0;
+            transform: translateX(12.3rem) translateY(-1rem);
+        }
+        70% {
+            opacity: 0;
+            transform: translateX(15.3rem) translateY(-1rem);
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateX(8rem) translateY(0rem);
+            opacity: 1;
+        }
+    }
+
+    .pop-Portfolio-R {
+        animation: pop-Portfolio-R 1s ease-out forwards;
+        color: #2B47BE;
+    }
+
+    /* for About Me */
+
+    @keyframes active-AboutMe-R {
+        0% {
+            transform: translateX(18.4rem);
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: right;
+        }
+        100% {
+            transform: translateX(7.5rem);
+            color: #E55213;
+            font-size: 27px;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+        }
+    }
+
+    .active-AboutMe-R {
+        color: #2B47BE;
+        font-size: 14px;
+        text-align: right;
+        animation: active-AboutMe-R 1s ease-out forwards;
+    }
+
+    @keyframes shift-AboutMe-R {
+        0% {
+            transform: translateX(7.5rem);
+            color: #E55213;
+            font-size: 27px;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+        }
+        100% {
+            transform: translateX(0rem);
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+
+    .shift-AboutMe-R {
+        color: #2B47BE;
+        font-size: 14px;
+        text-align: left;
+        animation: shift-AboutMe-R 1s ease-out forwards;
+    }
+
+    @keyframes pop-AboutMe-R {
+        0% {
+            transform: translateX(0rem);
+        }
+        20% {
+            transform: translateX(-4.3rem) translateY(-1rem);
+        }
+        30% {
+            opacity: 0;
+            transform: translateX(12.3rem) translateY(-1rem);
+        }
+        70% {
+            opacity: 0;
+            transform: translateX(20.3rem) translateY(-1rem);
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateX(17.75rem) translateY(0rem);
+            opacity: 1;
+        }
+    }
+
+    .pop-AboutMe-R {
+        animation: pop-AboutMe-R 1s ease-out forwards;
+        color: #2B47BE;
+    }
+
+    /* for Contact */
+
+    @keyframes active-Contact-R {
+        0% {
+            transform: translateX(0rem);
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: right;
+        }
+        100% {
+            transform: translateX(-8rem);
+            color: #E55213;
+            font-size: 27px;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+        }
+    }
+
+    .active-Contact-R {
+        color: #2B47BE;
+        font-size: 14px;
+        text-align: right;
+        animation: active-Contact-R 1s ease-out forwards;
+    }
+
+    @keyframes shift-Contact-R{
+        0% {
+            transform: translateX(-7rem);
+            color: #E55213;
+            font-size: 27px;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+        }
+        100% {
+            transform: translateX(-19rem);
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+
+    .shift-Contact-R {
+        color: #2B47BE;
+        font-size: 14px;
+        text-align: left;
+        animation: shift-Contact-R 1s ease-out forwards;
+    }
+
+    @keyframes pop-Contact-R {
+        0% {
+            transform: translateX(-19rem);
+        }
+        20% {
+            transform: translateX(-23.3rem) translateY(-1rem);
+        }
+        30% {
+            opacity: 0;
+            transform: translateX(23.3rem) translateY(-1rem);
+        }
+        70% {
+            opacity: 0;
+            transform: translateX(6.3rem) translateY(-1rem);
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateX(0rem) translateY(0rem);
+            opacity: 1;
+        }
+    }
+
+    .pop-Contact-R {
+        animation: pop-Contact-R 1s ease-out forwards;
+        color: #2B47BE;
+    }
+
+/* the left click animations */
+
+    /* for Portfolio */
+
+        @keyframes active-Portfolio-L {
+            0% {
+                transform: translateX(-9.5rem);
+                color: #2B47BE;
+                font-size: 14px;
+                text-align: right;
+            }
+            100% {
+                transform: translateX(0rem);
+                color: #E55213;
+                font-size: 27px;
+                text-align: center;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 5px;
+            }
+        }
+
+        .active-Portfolio-L {
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: right;
+            animation: active-Portfolio-L 1s ease-out forwards;
+        }
+
+        @keyframes shift-Portfolio-L{
+            0% {
+                transform: translateX(12rem);
+            }
+            20% {
+                transform: translateX(15rem) translateY(-1rem);
+            }
+            30% {
+                opacity: 0;
+                transform: translateX(-15rem) translateY(-1rem);
+            }
+            70% {
+                opacity: 0;
+                transform: translateX(-15rem) translateY(-1rem);
+            }
+            80% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateX(-7.6rem) translateY(0rem);
+                opacity: 1;
+            }
+            
+        }
+
+        .shift-Portfolio-L {
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: left;
+            animation: shift-Portfolio-L 1s ease-out forwards;
+        }
+
+        @keyframes pop-Portfolio-L {
+            0% {
+                transform: translateX(0rem);
+                color: #E55213;
+                font-size: 27px;
+                text-align: center;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 5px;
+            }
+            100% {
+                transform: translateX(8rem);
+                color: #2B47BE;
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+
+        .pop-Portfolio-L {
+            animation: pop-Portfolio-L 1s ease-out forwards;
+            color: #2B47BE;
+        }
+
+        /* for About Me */
+
+        @keyframes active-AboutMe-L {
+            0% {
+                transform: translateX(0rem);
+                color: #2B47BE;
+                font-size: 14px;
+                text-align: right;
+            }
+            100% {
+                transform: translateX(7.5rem);
+                color: #E55213;
+                font-size: 27px;
+                text-align: center;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 5px;
+            }
+        }
+
+        .active-AboutMe-L {
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: right;
+            animation: active-AboutMe-L 1s ease-out forwards;
+        }
+
+        @keyframes shift-AboutMe-L {
+            0% {
+                transform: translateX(17.75rem);
+            }
+            20% {
+                transform: translateX(20rem) translateY(-1rem);
+            }
+            30% {
+                opacity: 0;
+                transform: translateX(22.3rem) translateY(-1rem);
+            }
+            70% {
+                opacity: 0;
+                transform: translateX(-8rem) translateY(-1rem);
+            }
+            80% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateX(0rem) translateY(0rem);
+                opacity: 1;
+            }
+        }
+
+        .shift-AboutMe-L {
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: left;
+            animation: shift-AboutMe-L 1s ease-out forwards;
+        }
+
+        @keyframes pop-AboutMe-L {
+            0% {
+                transform: translateX(7.5rem);
+                color: #E55213;
+                font-size: 27px;
+                text-align: center;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 5px;
+            }
+            100% {
+                transform: translateX(17.75rem);
+                color: #2B47BE;
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+
+        .pop-AboutMe-L {
+            animation: pop-AboutMe-L 1s ease-out forwards;
+            color: #2B47BE;
+        }
+
+        /* for Contact */
+
+        @keyframes active-Contact-L {
+            0% {
+                transform: translateX(-19rem);
+                color: #2B47BE;
+                font-size: 14px;
+                text-align: right;
+            }
+            100% {
+                transform: translateX(-8rem);
+                color: #E55213;
+                font-size: 27px;
+                text-align: center;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 5px;
+            }
+        }
+
+        .active-Contact-L {
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: right;
+            animation: active-Contact-L 1s ease-out forwards;
+        }
+
+        @keyframes shift-Contact-L{
+            0% {
+                transform: translateX(0rem);
+            }
+            20% {
+                transform: translateX(4rem) translateY(-1rem);
+            }
+            30% {
+                opacity: 0;
+                transform: translateX(-23.3rem) translateY(-1rem);
+            }
+            70% {
+                opacity: 0;
+                transform: translateX(-23.3rem) translateY(-1rem);
+            }
+            80% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateX(-19rem) translateY(0rem);
+                opacity: 1;
+            }
+        }
+
+        .shift-Contact-L {
+            color: #2B47BE;
+            font-size: 14px;
+            text-align: left;
+            animation: shift-Contact-L 1s ease-out forwards;
+        }
+
+        @keyframes pop-Contact-L {
+            0% {
+                transform: translateX(-7rem);
+                color: #E55213;
+                font-size: 27px;
+                text-align: center;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 5px;
+            }
+            100% {
+                transform: translateX(0rem);
+                color: #2B47BE;
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+
+        .pop-Contact-L {
+            animation: pop-Contact-L 1s ease-out forwards;
+            color: #2B47BE;
+        }

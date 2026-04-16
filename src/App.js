@@ -93,6 +93,7 @@ function App() {
         {activePage[pageIndex] === 'Contact' && <PageContact inputValue={inputValue} onInputChange={inputHandleChange} messageValue={messageValue} onMessageChange={messageHandleChange} />}
         {activePage[pageIndex] === 'About Me' && <PageAboutMe />}
         <TimeHud />
+        
 
         {/* testing all the svg elements and init set up 
           <Button label="Source Code" />
